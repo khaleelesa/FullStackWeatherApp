@@ -1,0 +1,47 @@
+body {
+    background-color: lightskyblue;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10%;
+}
+
+.info {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10fr 2fr;
+    grid-gap: 10%;
+}
+
+.CityData {
+    width: 100%;
+    display: grid;
+    grid-gap: 10%;
+    size: 300%;
+    margin-top: 10px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    background: lightskyblue;
+    box-shadow: 0 4px 8px 0 greenyellow, 0 6px 20px 0 greenyellow;
+    border-radius: 1ch;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+#btn {
+    color: white;
+}

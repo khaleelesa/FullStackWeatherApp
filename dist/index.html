@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>WeatherAPP</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="info" id="getCity">
+            <input type="text" id="city-input" placeholder="City" class="css-input">
+            <a href="#" class="myButton" id="btn"><i class="fa fa-search" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <div class="CityData"> </div>
+
+    <script id="weather-template" type="text/x-handlebars-template">
+        {{#each cities}}
+        <div class="card">
+            <div class="city">
+                {{#if saved}}
+                <a href="#" class="subBtn"><i class="fa fa-minus" aria-hidden="true"></i></a> {{else}}
+                <a href="#" class="addBtn"><i class="fa fa-plus" aria-hidden="true"></i></a>{{/if}}
+                <span>{{name}}</span>
+                <div class="temperature">{{temperature}}<span>&#8451;</span></div>
+            </div>
+            <div>
+                <img src="http://openweathermap.org/img/wn/{{conditionPic}}@2x.png">
+                <div class="condition">{{condition}}</div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!-- <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="model.js"></script>
+    <script src="render.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
