@@ -14,12 +14,14 @@ window.onload = async(event) => {
 };
 
 $(".CityData").on('click', '.addBtn', async function() {
+    const data = await model.getDataFromDB()
     await model.saveCity($(this).siblings('span').text())
     view.renderdata(data)
     view.changeIcon(this, false)
 })
 
 $(".CityData").on('click', '.subBtn', async function() {
+    const data = await model.getDataFromDB()
     await model.removeCity($(this).siblings('span').text())
     view.renderdata(data)
     view.changeIcon(this, true)
